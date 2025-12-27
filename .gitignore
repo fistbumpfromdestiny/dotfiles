@@ -1,0 +1,10 @@
+# ~/dotfiles/.gitignore
+*~
+*.swp
+*.log
+.DS_Store
+
+# Sensitive files
+*_history
+*.secret
+*.env

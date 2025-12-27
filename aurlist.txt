@@ -1,0 +1,6 @@
+beekeeper-studio-bin
+beekeeper-studio-bin-debug
+c-client-debug
+php85
+php85-debug
+php85-fpm
