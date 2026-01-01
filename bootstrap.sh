@@ -34,4 +34,4 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 mkdir -p ~/.config
 ln -sf ~/dotfiles/nvim ~/.config/nvim
 
-echo "✅ Setup complete!"
+echo "Setup complete!"
