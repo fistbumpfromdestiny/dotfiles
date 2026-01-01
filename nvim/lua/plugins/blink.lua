@@ -10,6 +10,11 @@ return {
             module = "laravel.blink_source",
             score_offset = 100,
           },
+          snippets = {
+            opts = {
+              search_paths = { vim.fn.stdpath("config") .. "/snippets" },
+            },
+          },
         },
       },
       completion = {

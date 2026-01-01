@@ -1,0 +1,236 @@
+{
+  "Alpine x-data": {
+    "prefix": "x-data",
+    "body": "x-data=\"{ $1 }\"",
+    "description": "Alpine.js component data"
+  },
+  "Alpine x-show": {
+    "prefix": "x-show",
+    "body": "x-show=\"$1\"",
+    "description": "Alpine.js conditional visibility"
+  },
+  "Alpine x-if": {
+    "prefix": "x-if",
+    "body": "x-if=\"$1\"",
+    "description": "Alpine.js conditional rendering"
+  },
+  "Alpine x-for": {
+    "prefix": "x-for",
+    "body": "x-for=\"${1:item} in ${2:items}\"",
+    "description": "Alpine.js list rendering"
+  },
+  "Alpine x-model": {
+    "prefix": "x-model",
+    "body": "x-model=\"$1\"",
+    "description": "Alpine.js two-way data binding"
+  },
+  "Alpine x-text": {
+    "prefix": "x-text",
+    "body": "x-text=\"$1\"",
+    "description": "Alpine.js text content binding"
+  },
+  "Alpine x-html": {
+    "prefix": "x-html",
+    "body": "x-html=\"$1\"",
+    "description": "Alpine.js HTML content binding"
+  },
+  "Alpine x-bind": {
+    "prefix": "x-bind",
+    "body": "x-bind:${1:attribute}=\"$2\"",
+    "description": "Alpine.js attribute binding"
+  },
+  "Alpine x-on": {
+    "prefix": "x-on",
+    "body": "x-on:${1:event}=\"$2\"",
+    "description": "Alpine.js event listener"
+  },
+  "Alpine @click": {
+    "prefix": "@click",
+    "body": "@click=\"$1\"",
+    "description": "Alpine.js click event shorthand"
+  },
+  "Alpine @submit": {
+    "prefix": "@submit",
+    "body": "@submit.prevent=\"$1\"",
+    "description": "Alpine.js submit event with prevent default"
+  },
+  "Alpine :class": {
+    "prefix": ":class",
+    "body": ":class=\"{ '${1:class-name}': ${2:condition} }\"",
+    "description": "Alpine.js dynamic class binding"
+  },
+  "Alpine :style": {
+    "prefix": ":style",
+    "body": ":style=\"{ ${1:property}: ${2:value} }\"",
+    "description": "Alpine.js dynamic style binding"
+  },
+  "Alpine x-ref": {
+    "prefix": "x-ref",
+    "body": "x-ref=\"$1\"",
+    "description": "Alpine.js element reference"
+  },
+  "Alpine x-cloak": {
+    "prefix": "x-cloak",
+    "body": "x-cloak",
+    "description": "Alpine.js hide until ready"
+  },
+  "Alpine x-transition": {
+    "prefix": "x-transition",
+    "body": "x-transition",
+    "description": "Alpine.js transition"
+  },
+  "Alpine x-init": {
+    "prefix": "x-init",
+    "body": "x-init=\"$1\"",
+    "description": "Alpine.js initialization hook"
+  },
+  "Alpine Component": {
+    "prefix": "alpine",
+    "body": [
+      "<div x-data=\"{ ${1:open}: ${2:false} }\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "Alpine.js component template"
+  },
+  "Alpine Dropdown": {
+    "prefix": "alpine-dropdown",
+    "body": [
+      "<div x-data=\"{ open: false }\" @click.away=\"open = false\">",
+      "\t<button @click=\"open = !open\">",
+      "\t\t${1:Dropdown}",
+      "\t</button>",
+      "\t<div x-show=\"open\" x-transition>",
+      "\t\t$0",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "Alpine.js dropdown component"
+  },
+  "Alpine Modal": {
+    "prefix": "alpine-modal",
+    "body": [
+      "<div x-data=\"{ open: false }\">",
+      "\t<button @click=\"open = true\">",
+      "\t\t${1:Open Modal}",
+      "\t</button>",
+      "\t<div x-show=\"open\" @click.away=\"open = false\" x-transition>",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t\t<button @click=\"open = false\">Close</button>",
+      "\t\t</div>",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "Alpine.js modal component"
+  },
+  "Alpine Tabs": {
+    "prefix": "alpine-tabs",
+    "body": [
+      "<div x-data=\"{ activeTab: '${1:tab1}' }\">",
+      "\t<div>",
+      "\t\t<button @click=\"activeTab = '${1:tab1}'\" :class=\"{ 'active': activeTab === '${1:tab1}' }\">",
+      "\t\t\t${2:Tab 1}",
+      "\t\t</button>",
+      "\t\t<button @click=\"activeTab = '${3:tab2}'\" :class=\"{ 'active': activeTab === '${3:tab2}' }\">",
+      "\t\t\t${4:Tab 2}",
+      "\t\t</button>",
+      "\t</div>",
+      "\t<div x-show=\"activeTab === '${1:tab1}'\">",
+      "\t\t${5:Tab 1 content}",
+      "\t</div>",
+      "\t<div x-show=\"activeTab === '${3:tab2}'\">",
+      "\t\t${6:Tab 2 content}",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "Alpine.js tabs component"
+  },
+  "Alpine Toggle": {
+    "prefix": "alpine-toggle",
+    "body": [
+      "<div x-data=\"{ on: ${1:false} }\">",
+      "\t<button @click=\"on = !on\" :class=\"{ 'active': on }\">",
+      "\t\t${2:Toggle}",
+      "\t</button>",
+      "\t<div x-show=\"on\">",
+      "\t\t$0",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "Alpine.js toggle component"
+  },
+  "Alpine Accordion": {
+    "prefix": "alpine-accordion",
+    "body": [
+      "<div x-data=\"{ open: false }\">",
+      "\t<button @click=\"open = !open\">",
+      "\t\t${1:Accordion Header}",
+      "\t</button>",
+      "\t<div x-show=\"open\" x-transition x-collapse>",
+      "\t\t$0",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "Alpine.js accordion component"
+  },
+  "Alpine Form Input": {
+    "prefix": "alpine-input",
+    "body": [
+      "<div x-data=\"{ ${1:value}: '${2:}' }\">",
+      "\t<input type=\"${3:text}\" x-model=\"${1:value}\" placeholder=\"${4:}\">",
+      "\t<p x-text=\"${1:value}\"></p>",
+      "</div>"
+    ],
+    "description": "Alpine.js form input with binding"
+  },
+  "Alpine Counter": {
+    "prefix": "alpine-counter",
+    "body": [
+      "<div x-data=\"{ count: ${1:0} }\">",
+      "\t<button @click=\"count--\">-</button>",
+      "\t<span x-text=\"count\"></span>",
+      "\t<button @click=\"count++\">+</button>",
+      "</div>"
+    ],
+    "description": "Alpine.js counter component"
+  },
+  "Alpine Fetch": {
+    "prefix": "alpine-fetch",
+    "body": [
+      "<div x-data=\"{",
+      "\tdata: null,",
+      "\tloading: false,",
+      "\tasync fetchData() {",
+      "\t\tthis.loading = true;",
+      "\t\tconst response = await fetch('${1:url}');",
+      "\t\tthis.data = await response.json();",
+      "\t\tthis.loading = false;",
+      "\t}",
+      "}\" x-init=\"fetchData()\">",
+      "\t<div x-show=\"loading\">Loading...</div>",
+      "\t<div x-show=\"!loading\" x-text=\"data\"></div>",
+      "</div>"
+    ],
+    "description": "Alpine.js component with fetch"
+  },
+  "Alpine TALL Form": {
+    "prefix": "alpine-tall-form",
+    "body": [
+      "<form x-data=\"{",
+      "\tsubmitting: false,",
+      "\tsubmit() {",
+      "\t\tthis.submitting = true;",
+      "\t\t$0",
+      "\t}",
+      "}\" @submit.prevent=\"submit()\">",
+      "\t",
+      "\t<button type=\"submit\" :disabled=\"submitting\">",
+      "\t\t<span x-show=\"!submitting\">${1:Submit}</span>",
+      "\t\t<span x-show=\"submitting\">${2:Submitting...}</span>",
+      "\t</button>",
+      "</form>"
+    ],
+    "description": "Alpine.js form template for TALL stack"
+  }
+}

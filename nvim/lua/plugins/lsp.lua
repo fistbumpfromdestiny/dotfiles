@@ -120,7 +120,35 @@ return {
         },
         tailwindcss = {},
         ts_ls = {},
-        html = {},
+        html = {
+          filetypes = { "html", "blade" },
+          settings = {
+            html = {
+              format = {
+                enable = true,
+                wrapLineLength = 120,
+                wrapAttributes = "auto",
+              },
+              hover = {
+                documentation = true,
+                references = true,
+              },
+              suggest = {
+                html5 = true,
+              },
+            },
+          },
+          init_options = {
+            provideFormatter = true,
+            embeddedLanguages = {
+              javascript = true,
+            },
+            configurationSection = { "html" },
+            dataPaths = {
+              vim.fn.stdpath("config") .. "/alpine-html-data.json",
+            },
+          },
+        },
         cssls = {},
         volar = {},
       },

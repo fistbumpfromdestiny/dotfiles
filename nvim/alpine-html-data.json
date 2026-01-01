@@ -1,0 +1,200 @@
+{
+  "version": 1.1,
+  "globalAttributes": [
+    {
+      "name": "x-data",
+      "description": "Declare a new Alpine component and its data for a block of HTML",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-data Documentation",
+          "url": "https://alpinejs.dev/directives/data"
+        }
+      ]
+    },
+    {
+      "name": "x-init",
+      "description": "Run an expression when a component is initialized",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-init Documentation",
+          "url": "https://alpinejs.dev/directives/init"
+        }
+      ]
+    },
+    {
+      "name": "x-show",
+      "description": "Toggle the visibility of an element using CSS display property",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-show Documentation",
+          "url": "https://alpinejs.dev/directives/show"
+        }
+      ]
+    },
+    {
+      "name": "x-if",
+      "description": "Conditionally add/remove a block of HTML from the page entirely",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-if Documentation",
+          "url": "https://alpinejs.dev/directives/if"
+        }
+      ]
+    },
+    {
+      "name": "x-for",
+      "description": "Create new DOM nodes for each item in an array",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-for Documentation",
+          "url": "https://alpinejs.dev/directives/for"
+        }
+      ]
+    },
+    {
+      "name": "x-model",
+      "description": "Synchronize a piece of data with an input element (two-way binding)",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-model Documentation",
+          "url": "https://alpinejs.dev/directives/model"
+        }
+      ]
+    },
+    {
+      "name": "x-text",
+      "description": "Set the text content of an element",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-text Documentation",
+          "url": "https://alpinejs.dev/directives/text"
+        }
+      ]
+    },
+    {
+      "name": "x-html",
+      "description": "Set the inner HTML of an element (use with caution - XSS risk)",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-html Documentation",
+          "url": "https://alpinejs.dev/directives/html"
+        }
+      ]
+    },
+    {
+      "name": "x-bind",
+      "description": "Dynamically set HTML attributes on an element",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-bind Documentation",
+          "url": "https://alpinejs.dev/directives/bind"
+        }
+      ]
+    },
+    {
+      "name": "x-on",
+      "description": "Attach event listeners to elements",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-on Documentation",
+          "url": "https://alpinejs.dev/directives/on"
+        }
+      ]
+    },
+    {
+      "name": "x-ref",
+      "description": "Reference elements directly by their specified keys using this.$refs",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-ref Documentation",
+          "url": "https://alpinejs.dev/directives/ref"
+        }
+      ]
+    },
+    {
+      "name": "x-cloak",
+      "description": "Hide an element until Alpine is fully loaded on the page",
+      "references": [
+        {
+          "name": "Alpine.js x-cloak Documentation",
+          "url": "https://alpinejs.dev/directives/cloak"
+        }
+      ]
+    },
+    {
+      "name": "x-transition",
+      "description": "Apply smooth transitions to an element as it's shown or hidden",
+      "references": [
+        {
+          "name": "Alpine.js x-transition Documentation",
+          "url": "https://alpinejs.dev/directives/transition"
+        }
+      ]
+    },
+    {
+      "name": "x-effect",
+      "description": "Execute a script each time one of its dependencies change",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-effect Documentation",
+          "url": "https://alpinejs.dev/directives/effect"
+        }
+      ]
+    },
+    {
+      "name": "x-ignore",
+      "description": "Prevent Alpine from initializing a block of HTML",
+      "references": [
+        {
+          "name": "Alpine.js x-ignore Documentation",
+          "url": "https://alpinejs.dev/directives/ignore"
+        }
+      ]
+    },
+    {
+      "name": "x-teleport",
+      "description": "Transport part of your Alpine template to another part of the DOM",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-teleport Documentation",
+          "url": "https://alpinejs.dev/directives/teleport"
+        }
+      ]
+    },
+    {
+      "name": "x-modelable",
+      "description": "Expose any Alpine property as the target of x-model",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-modelable Documentation",
+          "url": "https://alpinejs.dev/directives/modelable"
+        }
+      ]
+    },
+    {
+      "name": "x-id",
+      "description": "Generate unique IDs for HTML elements and ensure they're accessible",
+      "valueSet": "v",
+      "references": [
+        {
+          "name": "Alpine.js x-id Documentation",
+          "url": "https://alpinejs.dev/directives/id"
+        }
+      ]
+    }
+  ]
+}

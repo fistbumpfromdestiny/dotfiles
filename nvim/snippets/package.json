@@ -1,0 +1,13 @@
+{
+  "name": "custom-snippets",
+  "version": "1.0.0",
+  "description": "Custom snippets for Alpine.js and TALL stack",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./html.json"
+      }
+    ]
+  }
+}
