@@ -26,6 +26,16 @@ fi
 echo "Installing AUR packages..."
 yay -S --needed --noconfirm $(cat ~/dotfiles/aurlist.txt)
 
+# Install npm global packages
+if command -v npm &> /dev/null; then
+    echo "Installing npm global packages..."
+    while read -r package; do
+        npm install -g "$package"
+    done < ~/dotfiles/npmlist.txt
+else
+    echo "npm not found, skipping npm packages..."
+fi
+
 # Create symlinks
 echo "Creating symlinks..."
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
