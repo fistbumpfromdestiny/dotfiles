@@ -1,6 +1,12 @@
 return {
   {
+    "b0o/schemastore.nvim",
+  },
+  {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "b0o/schemastore.nvim",
+    },
     opts = {
       servers = {
         intelephense = {
@@ -119,7 +125,53 @@ return {
           },
         },
         tailwindcss = {},
-        ts_ls = {},
+        ts_ls = {
+          settings = {
+            typescript = {
+              inlayHints = {
+                includeInlayParameterNameHints = "all",
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+              suggest = {
+                completeFunctionCalls = true,
+              },
+              preferences = {
+                importModuleSpecifier = "non-relative",
+              },
+            },
+            javascript = {
+              inlayHints = {
+                includeInlayParameterNameHints = "all",
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+              suggest = {
+                completeFunctionCalls = true,
+              },
+            },
+          },
+        },
+        jsonls = {
+          on_new_config = function(new_config)
+            new_config.settings.json.schemas = new_config.settings.json.schemas or {}
+            vim.list_extend(new_config.settings.json.schemas, require("schemastore").json.schemas())
+          end,
+          settings = {
+            json = {
+              schemas = {},
+              validate = { enable = true },
+            },
+          },
+        },
         html = {
           filetypes = { "html", "blade" },
           settings = {
@@ -151,6 +203,49 @@ return {
         },
         cssls = {},
         volar = {},
+        clojure_lsp = {
+          settings = {
+            clojure = {
+              -- Enable semantic tokens
+              semanticTokens = {
+                enable = true,
+              },
+              -- Cljfmt formatting options
+              cljfmt = {
+                enable = true,
+              },
+              -- Performance settings
+              linters = {
+                ["clj-kondo"] = {
+                  enabled = true,
+                },
+              },
+            },
+          },
+        },
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "basic",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = "workspace",
+                autoImportCompletions = true,
+              },
+            },
+          },
+        },
+        elixirls = {
+          settings = {
+            elixirLS = {
+              dialyzerEnabled = true,
+              fetchDeps = false,
+              enableTestLenses = true,
+              suggestSpecs = true,
+            },
+          },
+        },
       },
     },
   },
@@ -161,9 +256,19 @@ return {
         "intelephense",
         "tailwindcss-language-server",
         "typescript-language-server",
+        "json-lsp",
         "html-lsp",
         "css-lsp",
         "vue-language-server",
+        "clojure-lsp",
+        "pyright",
+        "elixir-ls",
+        "prettier",
+        "eslint_d",
+        "black",
+        "isort",
+        "ruff",
+        "debugpy",
       },
     },
   },
