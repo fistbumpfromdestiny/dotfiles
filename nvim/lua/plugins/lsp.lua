@@ -125,41 +125,7 @@ return {
           },
         },
         tailwindcss = {},
-        ts_ls = {
-          settings = {
-            typescript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
-              },
-              suggest = {
-                completeFunctionCalls = true,
-              },
-              preferences = {
-                importModuleSpecifier = "non-relative",
-              },
-            },
-            javascript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
-              },
-              suggest = {
-                completeFunctionCalls = true,
-              },
-            },
-          },
-        },
+        vtsls = {},
         jsonls = {
           on_new_config = function(new_config)
             new_config.settings.json.schemas = new_config.settings.json.schemas or {}
@@ -202,7 +168,13 @@ return {
           },
         },
         cssls = {},
-        volar = {},
+        vue_ls = {
+          init_options = {
+            vue = {
+              hybridMode = true,
+            },
+          },
+        },
         clojure_lsp = {
           settings = {
             clojure = {
@@ -236,16 +208,6 @@ return {
             },
           },
         },
-        elixirls = {
-          settings = {
-            elixirLS = {
-              dialyzerEnabled = true,
-              fetchDeps = false,
-              enableTestLenses = true,
-              suggestSpecs = true,
-            },
-          },
-        },
       },
     },
   },
@@ -255,14 +217,13 @@ return {
       ensure_installed = {
         "intelephense",
         "tailwindcss-language-server",
-        "typescript-language-server",
+        "vtsls",
         "json-lsp",
         "html-lsp",
         "css-lsp",
         "vue-language-server",
         "clojure-lsp",
         "pyright",
-        "elixir-ls",
         "prettier",
         "eslint_d",
         "black",

@@ -4,6 +4,7 @@ return {
     optional = true,
     opts = {
       linters_by_ft = {
+        vue = { "eslint_d" },
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },

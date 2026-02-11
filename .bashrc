@@ -22,3 +22,7 @@ set +h
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Elixir
+export ERL_AFLAGS="-kernel shell_history enabled"
+export PATH="$HOME/.config/emacs/bin:$PATH"

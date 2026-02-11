@@ -3,6 +3,9 @@ return {
     "stevearc/conform.nvim",
     optional = true,
     opts = {
+      default_format_opts = {
+        timeout_ms = 10000, -- 10 seconds instead of default 3
+      },
       formatters_by_ft = {
         php = { "pint", "php_cs_fixer" },
         blade = { "blade-formatter" },
