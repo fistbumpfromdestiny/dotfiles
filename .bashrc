@@ -26,3 +26,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket ssh-add -l &>/dev/null || ssh-add ~/.ssh/id_ed25519
+
