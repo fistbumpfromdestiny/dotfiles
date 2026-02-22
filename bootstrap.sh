@@ -43,5 +43,6 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 mkdir -p ~/.config
 ln -sf ~/dotfiles/nvim ~/.config/nvim
+ln -sf ~/dotfiles/doom ~/.config/doom
 
 echo "Setup complete!"
